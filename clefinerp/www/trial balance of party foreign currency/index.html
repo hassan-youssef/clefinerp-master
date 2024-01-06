@@ -1,0 +1,48 @@
+<div class="row  my-4">
+    <div class="col-lg-2" >
+        <select class="input-with-feedback form-control input-xs ellipsis" id="company">                        
+            {%for co in company%}
+            {%if co.name == default_company %}
+                <option selected>{{co.name}}</option>            
+            {%else%}
+                <option>{{co.name}}</option>            
+            {%endif%}
+            {%endfor%}    
+        </select>
+    </div>
+
+    <div class="col-lg-2" >
+        <input class="form-control" type="date" value={{from_date}} id="from-date">
+    </div>  
+    
+    <div class="col-lg-2 " >
+        <input class="form-control" type="date" value={{to_date}} id="to-date" >
+    </div>
+
+    <div class="col-lg-2">
+        <select class="input-with-feedback form-control input-xs ellipsis" id="select_presentation_currency">
+            <option ></option>            
+            {%for c in currency%}
+            <option>{{c.name}}</option>
+            {%endfor%}    
+        </select>
+    </div>  
+    
+    <div class="col-lg-2">
+        <select class="input-with-feedback form-control input-xs ellipsis" id="select_account">
+            <!-- generate from js -->
+        </select>
+    </div>
+
+    <div class="col-lg-1">
+       <input type="button" class="btn btn-primary" value="Report" id="report">
+    </div>
+
+    <div class="col-lg-1">
+        <input type="button" class="btn btn-primary" value="Export" id="export">
+     </div>
+
+</div>
+<table class="table table-bordered" id="results">    
+    <!-- generate from js -->
+</table>

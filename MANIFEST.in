@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include clefinerp *.css
+recursive-include clefinerp *.csv
+recursive-include clefinerp *.html
+recursive-include clefinerp *.ico
+recursive-include clefinerp *.js
+recursive-include clefinerp *.json
+recursive-include clefinerp *.md
+recursive-include clefinerp *.png
+recursive-include clefinerp *.py
+recursive-include clefinerp *.svg
+recursive-include clefinerp *.txt
+recursive-exclude clefinerp *.pyc
